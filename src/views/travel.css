@@ -1,0 +1,82 @@
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.red {
+  border: 1px solid red;
+}
+
+.green {
+  border: 1px solid green;
+}
+
+.background_image {
+  height: 100%;
+  width: 100%;
+  background: url("https://images.foody.vn/res/g14/136922/prof/s576x330/foody-mobile-t-2-jpg-991-635677327971124950.jpg") center center no-repeat;
+  background-size: cover;
+  /* Resize the background image to cover the entire container */
+}
+.background_image .about-sign-in {
+  height: 60px;
+  background-color: black;
+  opacity: 0.7;
+  text-align: right;
+  padding-top: 20px;
+  padding-right: 20px;
+}
+.background_image .about-sign-in .about,
+.background_image .about-sign-in .sign-in {
+  text-decoration: none;
+  margin-right: 20px;
+  padding: 10px;
+  font-size: 25px;
+}
+.background_image .about-sign-in .sign-in {
+  border: 1px solid green;
+  border-radius: 20px;
+}
+.background_image .logo {
+  background: url("https://travelgenuine.com/wp-content/uploads/2019/01/tg-logo-300.png") center center no-repeat;
+  margin-top: 80px;
+  height: 200;
+  background-size: contain;
+}
+.background_image .slogan-item {
+  margin-top: 50px;
+}
+.background_image .slogan-item .right,
+.background_image .slogan-item .middle,
+.background_image .slogan-item .left {
+  width: 33%;
+  display: inline-block;
+  text-align: center;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.background_image .slogan-item span {
+  display: block;
+  color: #3aa036;
+}
+.background_image .slogan-text {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: blue;
+}
+.background_image .btn-start {
+  margin-top: 20px;
+  text-align: center;
+}
+.background_image .btn-start button {
+  border: 1px solid white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: green;
+  color: white;
+}
