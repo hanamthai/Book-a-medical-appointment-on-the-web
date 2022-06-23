@@ -6,7 +6,7 @@ let router = express.Router();
 
 let initWebRoutes = (app) => {
     router.get('/home-page', homeController.getHomePage);
-    router.get('/employeepage/info', homeController.getEmployeePage);
+    router.get('/employee/info', homeController.getEmployeePage);
 
     //rest api
 
