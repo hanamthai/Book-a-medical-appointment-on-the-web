@@ -3,6 +3,7 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('Clinics', {   //MySQL automatically converts to lowercase 
+        // clinic: DataTypes.STRING,
         // address: DataTypes.STRING,
         // description: DataTypes.TEXT,
         // image: DataTypes.STRING
@@ -11,6 +12,9 @@ module.exports = {
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
+      },
+      name: {
+        type: Sequelize.STRING
       },
       address: {
         type: Sequelize.STRING

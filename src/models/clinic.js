@@ -15,6 +15,7 @@ module.exports = (sequelize, DataTypes) => {
   };
   Clinic.init({
     // id: DataTypes.STRING,      no need to declare primary key
+    name: DataTypes.STRING,
     address: DataTypes.STRING,
     description: DataTypes.TEXT,
     image: DataTypes.STRING

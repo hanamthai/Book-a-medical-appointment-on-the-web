@@ -10,8 +10,10 @@ module.exports = {
       // email: DataTypes.STRING,
       // password: DataTypes.STRING,
       // gender: DataTypes.BOOLEAN,
-      // typeRole: DataTypes.STRING,
-      // keyRole: DataTypes.STRING
+      // roleId: DataTypes.STRING,
+      // phonenumber: DataTypes.STRING,
+      // positionId: DataTypes.STRING,
+      // image: DataTypes.STRING
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -36,10 +38,16 @@ module.exports = {
       gender: {
         type: Sequelize.BOOLEAN
       },
-      typeRole: {
+      roleId: {
         type: Sequelize.STRING
       },
-      keyRole: {
+      phonenumber: {
+        type: Sequelize.STRING
+      },
+      positionId: {
+        type: Sequelize.STRING
+      },
+      image: {
         type: Sequelize.STRING
       },
       createdAt: {

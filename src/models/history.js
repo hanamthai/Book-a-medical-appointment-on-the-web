@@ -17,7 +17,8 @@ module.exports = (sequelize, DataTypes) => {
     // id: DataTypes.STRING,      no need to declare primary key
     patientId: DataTypes.INTEGER,
     doctorId: DataTypes.INTEGER,
-    description: DataTypes.TEXT
+    description: DataTypes.TEXT,
+    files: DataTypes.TEXT
   }, {
     sequelize,
     modelName: 'History',
