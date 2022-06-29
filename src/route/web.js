@@ -7,6 +7,8 @@ let router = express.Router();
 let initWebRoutes = (app) => {
     router.get('/home-page', homeController.getHomePage);
     router.get('/employee/info', homeController.getEmployeePage);
+    router.get('/form-sign-in',homeController.getFormSignIn);
+    router.post('/post-sign-in',homeController.postSignIn);
 
     //rest api
 

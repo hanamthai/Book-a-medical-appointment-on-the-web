@@ -48,3 +48,9 @@ download sequelize-cli@6.2.0 -> cung cấp các câu lệnh để thao tác vớ
 ```bash
 npm install --save-dev sequelize-cli@6.2.0
 ```
+
+hash password:
+
+```bash
+npm install --save bcryptjs@2.4.3
+```
