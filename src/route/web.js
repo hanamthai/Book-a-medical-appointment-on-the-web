@@ -9,6 +9,7 @@ let initWebRoutes = (app) => {
     router.get('/employee/info', homeController.getEmployeePage);
     router.get('/form-sign-in',homeController.getFormSignIn);
     router.post('/post-sign-in',homeController.postSignIn);
+    router.get('/get-info',homeController.getInfo);
 
     //rest api
 

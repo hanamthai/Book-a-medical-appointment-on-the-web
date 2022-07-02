@@ -1,5 +1,5 @@
-import db from '../models/index';
-import CRUDService from '../services/CRUDService';
+import db from "../models/index";
+import CRUDService from "../services/CRUDService";
 
 let getHomePage = (req, res) => {
   return res.render("homepage.ejs"); //Tại sao không chỉ rõ đường dẫn (views/homepage.ejs) là bởi vì trong viewEngine ta đã khai báo đường dẫn.
@@ -9,8 +9,9 @@ let getEmployeePage = async (req, res) => {
   try {
     let data = await db.User.findAll();
     console.log(data);
-    return res.render('employee/info.ejs',{
-      data: JSON.stringify(data)});
+    return res.render("employee/info.ejs", {
+      data: JSON.stringify(data),
+    });
   } catch (e) {
     console.log(e);
   }
@@ -23,8 +24,16 @@ let getFormSignIn = (req, res) => {
 let postSignIn = async (req, res) => {
   let mess = await CRUDService.createNewUser(req.body);
   console.log(mess);
-  return res.send('Thank you for filling out our form !!!');
-}
+  return res.send("Thank you for filling out our form !!!");
+};
+
+let getInfo = async (req, res) => {
+  let data = await CRUDService.displayUser();
+  console.log(data);
+  return res.render("display-users.ejs",{
+    dataTable: data
+  });
+};
 
 // sau này sẽ còn nhiều func nên ta export theo dạng object
 // object: {
@@ -36,5 +45,6 @@ module.exports = {
   getHomePage: getHomePage,
   getEmployeePage: getEmployeePage,
   getFormSignIn: getFormSignIn,
-  postSignIn: postSignIn
+  postSignIn: postSignIn,
+  getInfo: getInfo,
 };
