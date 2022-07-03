@@ -29,11 +29,29 @@ let postSignIn = async (req, res) => {
 
 let getInfo = async (req, res) => {
   let data = await CRUDService.displayUser();
-  console.log(data);
   return res.render("display-users.ejs",{
     dataTable: data
   });
 };
+
+let getEditCRUD = async (req,res) => {
+  let userId = req.query.id;
+  if(userId){
+    let userData = await CRUDService.getUserInfoById(userId);
+    return res.render("editCRUD.ejs" ,{userData: userData});
+  }
+  else{
+    return res.send("Could not find user!!!");
+  }
+}
+
+let putCRUD = async (req, res) => {
+  let data = req.body;
+  let allUsers = await CRUDService.updateUserData(data);
+  return res.render("display-users.ejs",{
+    dataTable: allUsers
+  });
+}
 
 // sau này sẽ còn nhiều func nên ta export theo dạng object
 // object: {
@@ -47,4 +65,6 @@ module.exports = {
   getFormSignIn: getFormSignIn,
   postSignIn: postSignIn,
   getInfo: getInfo,
+  getEditCRUD: getEditCRUD,
+  putCRUD: putCRUD
 };
