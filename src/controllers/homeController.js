@@ -53,6 +53,17 @@ let putCRUD = async (req, res) => {
   });
 }
 
+let deleteCRUD = async (req, res) => {
+  let id = req.query.id;
+  if(id){
+    await CRUDService.deleteUserById(id);
+    return res.send("Delete completed!");
+  }
+  else{
+    return res.send("User not found!!!");
+  }
+}
+
 // sau này sẽ còn nhiều func nên ta export theo dạng object
 // object: {
 //     key:" ",
@@ -66,5 +77,6 @@ module.exports = {
   postSignIn: postSignIn,
   getInfo: getInfo,
   getEditCRUD: getEditCRUD,
-  putCRUD: putCRUD
+  putCRUD: putCRUD,
+  deleteCRUD: deleteCRUD
 };
