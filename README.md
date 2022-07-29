@@ -30,12 +30,14 @@ run cmd:
 
 ```bash
 npm install body-parser@1.19.0 dotenv@8.2.0 ejs@3.1.5 express@4.17.1
+npm install --save cor@2.8.5 
 ```
 
 - "@babel/core":"^7.12.10", (
 - "@babel/node":"^7.12.10", @bable is compiler of javascript
 - "@babel/preset-env":"7.12.10" )
 - "nodemon":"^2.0.7" (If the file has changed, the server will automatically restart)
+- cor:^2.8.5 (Enable AllCORS Request - Cross Origin Resource Sharing)
 
 run cmd:
 
